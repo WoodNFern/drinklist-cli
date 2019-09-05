@@ -1,10 +1,10 @@
-language: python
 python:
 - '3.6'
 services:
 - docker
-before_install:
+install:
 - docker pull lnl7/nix
+- docker run lnl7/nix nix-shell
 script:
 - docker run lnl7/nix nix-shell --run make all
 deploy:
