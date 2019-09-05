@@ -1,12 +1,9 @@
-python:
-- '3.6'
-services:
-- docker
+language: nix
+nix: 2.0.4
 install:
-- docker pull lnl7/nix
-- docker run lnl7/nix nix-shell
+- nix-shell --run "echo OK"
 script:
-- docker run lnl7/nix nix-shell --run make all
+- nix-shell --run "make all"
 deploy:
   provider: releases
   api_key:
