@@ -15,5 +15,5 @@ deploy:
   file: packages/*
   skip_cleanup: true
   on:
-    branch: ci
+    branch: master
     repo: FIUS/drinklist-cli
